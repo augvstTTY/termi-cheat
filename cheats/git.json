@@ -1,18 +1,214 @@
 {
-    "Basics": [
+    "Configuración Inicial": [
         {
-            "cmd": "git clone <repo_url>",
+            "cmd": "git config --global user.name 'Tu Nombre'",
+            "desc": "Define tu nombre (global) para los commits"
+        },
+        {
+            "cmd": "git config --global user.email 'tu@email.com'",
+            "desc": "Define tu email (global) para los commits"
+        },
+        {
+            "cmd": "git config --global core.editor 'code --wait'",
+            "desc": "Configura VS Code como editor de Git"
+        },
+        {
+            "cmd": "git config --list",
+            "desc": "Muestra todas las configuraciones actuales"
+        }
+    ],
+    "Repositorios": [
+        {
+            "cmd": "git init",
+            "desc": "Inicializa un repositorio Git en el directorio actual"
+        },
+        {
+            "cmd": "git clone <url_repo>",
             "desc": "Clona un repositorio remoto"
         },
         {
-            "cmd": "git status",
-            "desc": "Muestra cambios en el working directory"
+            "cmd": "git clone --branch <rama> <url_repo>",
+            "desc": "Clona una rama específica"
+        },
+        {
+            "cmd": "git remote -v",
+            "desc": "Lista repositorios remotos configurados"
         }
     ],
-    "Branching": [
+    "Flujo Básico": [
         {
-            "cmd": "git checkout -b <branch_name>",
+            "cmd": "git status",
+            "desc": "Muestra el estado del working directory"
+        },
+        {
+            "cmd": "git add <archivo>",
+            "desc": "Añade un archivo al staging area"
+        },
+        {
+            "cmd": "git add .",
+            "desc": "Añade TODOS los cambios al staging area"
+        },
+        {
+            "cmd": "git commit -m 'mensaje'",
+            "desc": "Crea un commit con los cambios staged"
+        },
+        {
+            "cmd": "git commit --amend",
+            "desc": "Modifica el último commit (ej: olvidaste un archivo)"
+        },
+        {
+            "cmd": "git push",
+            "desc": "Envía commits al repositorio remoto"
+        },
+        {
+            "cmd": "git pull",
+            "desc": "Obtiene cambios del remoto y los fusiona localmente"
+        }
+    ],
+    "Ramas (Branching)": [
+        {
+            "cmd": "git branch",
+            "desc": "Lista todas las ramas (local)"
+        },
+        {
+            "cmd": "git branch -a",
+            "desc": "Lista todas las ramas (local + remoto)"
+        },
+        {
+            "cmd": "git checkout -b <nombre_rama>",
             "desc": "Crea una rama y cambia a ella"
+        },
+        {
+            "cmd": "git checkout <rama>",
+            "desc": "Cambia a una rama existente"
+        },
+        {
+            "cmd": "git merge <rama>",
+            "desc": "Fusiona una rama con la rama actual"
+        },
+        {
+            "cmd": "git branch -d <rama>",
+            "desc": "Elimina una rama local (seguro)"
+        },
+        {
+            "cmd": "git branch -D <rama>",
+            "desc": "Elimina una rama local (forzado)"
+        },
+        {
+            "cmd": "git push origin --delete <rama>",
+            "desc": "Elimina una rama en el remoto"
+        }
+    ],
+    "Historial y Cambios": [
+        {
+            "cmd": "git log",
+            "desc": "Muestra el historial de commits"
+        },
+        {
+            "cmd": "git log --oneline",
+            "desc": "Historial compacto (1 línea por commit)"
+        },
+        {
+            "cmd": "git log --graph --all",
+            "desc": "Historial con gráfico de ramas"
+        },
+        {
+            "cmd": "git diff",
+            "desc": "Muestra cambios no staged"
+        },
+        {
+            "cmd": "git diff --staged",
+            "desc": "Muestra cambios staged"
+        },
+        {
+            "cmd": "git show <commit_hash>",
+            "desc": "Muestra cambios de un commit específico"
+        },
+        {
+            "cmd": "git restore <archivo>",
+            "desc": "Descarta cambios en el working directory"
+        },
+        {
+            "cmd": "git reset --hard",
+            "desc": "Borra TODOS los cambios locales (¡Cuidado!)"
+        }
+    ],
+    "Trabajo con Remotos": [
+        {
+            "cmd": "git fetch",
+            "desc": "Descarga cambios del remoto (sin fusionar)"
+        },
+        {
+            "cmd": "git push -u origin <rama>",
+            "desc": "Primer push de una rama (establece upstream)"
+        },
+        {
+            "cmd": "git remote add origin <url_repo>",
+            "desc": "Añade un repositorio remoto"
+        },
+        {
+            "cmd": "git push --force",
+            "desc": "Fuerza push (reescribe historia remota, ¡Usar con cuidado!)"
+        }
+    ],
+    "Stashing": [
+        {
+            "cmd": "git stash",
+            "desc": "Guarda cambios temporales sin commit"
+        },
+        {
+            "cmd": "git stash list",
+            "desc": "Lista todos los stashes guardados"
+        },
+        {
+            "cmd": "git stash apply",
+            "desc": "Aplica el último stash guardado"
+        },
+        {
+            "cmd": "git stash drop",
+            "desc": "Elimina el último stash"
+        }
+    ],
+    "Advanced (Rebase, Cherry-pick, etc.)": [
+        {
+            "cmd": "git rebase <rama>",
+            "desc": "Reaplica commits sobre otra rama (reescribe historia)"
+        },
+        {
+            "cmd": "git cherry-pick <commit_hash>",
+            "desc": "Aplica un commit específico a la rama actual"
+        },
+        {
+            "cmd": "git bisect start",
+            "desc": "Inicia búsqueda binaria para encontrar un bug"
+        },
+        {
+            "cmd": "git blame <archivo>",
+            "desc": "Muestra quién modificó cada línea de un archivo"
+        }
+    ],
+    "Tags": [
+        {
+            "cmd": "git tag <nombre_tag>",
+            "desc": "Crea un tag ligero"
+        },
+        {
+            "cmd": "git tag -a <nombre_tag> -m 'mensaje'",
+            "desc": "Crea un tag anotado"
+        },
+        {
+            "cmd": "git push --tags",
+            "desc": "Envía tags al remoto"
+        }
+    ],
+    "Submódulos": [
+        {
+            "cmd": "git submodule add <url_repo> <ruta>",
+            "desc": "Añade un submódulo"
+        },
+        {
+            "cmd": "git submodule update --init --recursive",
+            "desc": "Actualiza submódulos"
         }
     ]
 }
