@@ -1,0 +1,83 @@
+{
+    "Contenedores": [
+        {
+            "cmd": "docker run -it <imagen>",
+            "desc": "Ejecuta un contenedor en modo interactivo",
+            "example": "docker run -it ubuntu bash"
+        },
+        {
+            "cmd": "docker ps",
+            "desc": "Lista contenedores en ejecución"
+        },
+        {
+            "cmd": "docker ps -a",
+            "desc": "Lista TODOS los contenedores (incluidos detenidos)"
+        },
+        {
+            "cmd": "docker stop <container_id>",
+            "desc": "Detiene un contenedor"
+        },
+        {
+            "cmd": "docker rm <container_id>",
+            "desc": "Elimina un contenedor"
+        },
+        {
+            "cmd": "docker logs <container_id>",
+            "desc": "Muestra logs de un contenedor"
+        }
+    ],
+    "Imágenes": [
+        {
+            "cmd": "docker build -t <nombre_imagen> .",
+            "desc": "Construye una imagen desde un Dockerfile",
+            "example": "docker build -t my-app ."
+        },
+        {
+            "cmd": "docker images",
+            "desc": "Lista imágenes locales"
+        },
+        {
+            "cmd": "docker rmi <image_id>",
+            "desc": "Elimina una imagen"
+        },
+        {
+            "cmd": "docker pull <imagen>",
+            "desc": "Descarga una imagen de un registro"
+        }
+    ],
+    "Redes y Volúmenes": [
+        {
+            "cmd": "docker network ls",
+            "desc": "Lista redes disponibles"
+        },
+        {
+            "cmd": "docker volume create <nombre_volumen>",
+            "desc": "Crea un volumen persistente"
+        }
+    ],
+    "Docker Compose": [
+        {
+            "cmd": "docker-compose up",
+            "desc": "Levanta servicios definidos en docker-compose.yml"
+        },
+        {
+            "cmd": "docker-compose down",
+            "desc": "Detiene y elimina servicios"
+        },
+        {
+            "cmd": "docker-compose logs",
+            "desc": "Muestra logs de los servicios"
+        }
+    ],
+    "Advanced": [
+        {
+            "cmd": "docker exec -it <container_id> <comando>",
+            "desc": "Ejecuta un comando dentro de un contenedor en ejecución",
+            "example": "docker exec -it my-db psql -U postgres"
+        },
+        {
+            "cmd": "docker system prune",
+            "desc": "Limpia recursos no utilizados (¡Cuidado!)"
+        }
+    ]
+}
