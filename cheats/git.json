@@ -1,0 +1,18 @@
+{
+    "Basics": [
+        {
+            "cmd": "git clone <repo_url>",
+            "desc": "Clona un repositorio remoto"
+        },
+        {
+            "cmd": "git status",
+            "desc": "Muestra cambios en el working directory"
+        }
+    ],
+    "Branching": [
+        {
+            "cmd": "git checkout -b <branch_name>",
+            "desc": "Crea una rama y cambia a ella"
+        }
+    ]
+}
