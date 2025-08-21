@@ -1,0 +1,616 @@
+{
+  "Sistema de Archivos y Navegación": [
+    {
+      "cmd": "pwd",
+      "desc": "Mostrar directorio actual (Print Working Directory)"
+    },
+    {
+      "cmd": "ls",
+      "desc": "Listar archivos y directorios"
+    },
+    {
+      "cmd": "ls -l",
+      "desc": "Listar con detalles (permisos, tamaño, fecha)"
+    },
+    {
+      "cmd": "ls -a",
+      "desc": "Listar incluyendo archivos ocultos"
+    },
+    {
+      "cmd": "cd ~",
+      "desc": "Ir al directorio home del usuario"
+    },
+    {
+      "cmd": "cd ..",
+      "desc": "Subir un nivel de directorio"
+    },
+    {
+      "cmd": "cd -",
+      "desc": "Volver al directorio anterior"
+    },
+    {
+      "cmd": "mkdir nombre_directorio",
+      "desc": "Crear nuevo directorio"
+    },
+    {
+      "cmd": "mkdir -p ruta/completa/con/subdirectorios",
+      "desc": "Crear directorios con subdirectorios (parents)"
+    },
+    {
+      "cmd": "rm archivo.txt",
+      "desc": "Eliminar archivo"
+    },
+    {
+      "cmd": "rm -r directorio",
+      "desc": "Eliminar directorio y su contenido (recursivo)"
+    },
+    {
+      "cmd": "rmdir directorio_vacio",
+      "desc": "Eliminar directorio vacío"
+    },
+    {
+      "cmd": "cp archivo.txt destino/",
+      "desc": "Copiar archivo a directorio destino"
+    },
+    {
+      "cmd": "cp -r directorio/ destino/",
+      "desc": "Copiar directorio completo"
+    },
+    {
+      "cmd": "mv archivo.txt nuevo_nombre.txt",
+      "desc": "Renombrar archivo"
+    },
+    {
+      "cmd": "mv archivo.txt directorio/",
+      "desc": "Mover archivo a otro directorio"
+    },
+    {
+      "cmd": "touch nuevo_archivo.txt",
+      "desc": "Crear archivo vacío o actualizar timestamp"
+    }
+  ],
+
+  "Ver y Editar Archivos": [
+    {
+      "cmd": "cat archivo.txt",
+      "desc": "Mostrar contenido completo de archivo"
+    },
+    {
+      "cmd": "less archivo.txt",
+      "desc": "Ver archivo página por página (navegable)"
+    },
+    {
+      "cmd": "more archivo.txt",
+      "desc": "Ver archivo página por página"
+    },
+    {
+      "cmd": "head archivo.txt",
+      "desc": "Mostrar primeras 10 líneas del archivo"
+    },
+    {
+      "cmd": "head -n 20 archivo.txt",
+      "desc": "Mostrar primeras 20 líneas"
+    },
+    {
+      "cmd": "tail archivo.txt",
+      "desc": "Mostrar últimas 10 líneas del archivo"
+    },
+    {
+      "cmd": "tail -n 20 archivo.txt",
+      "desc": "Mostrar últimas 20 líneas"
+    },
+    {
+      "cmd": "tail -f archivo.log",
+      "desc": "Seguir archivo en tiempo real (log files)"
+    },
+    {
+      "cmd": "nano archivo.txt",
+      "desc": "Editor de texto simple para principiantes"
+    },
+    {
+      "cmd": "vim archivo.txt",
+      "desc": "Editor de texto avanzado (requiere aprendizaje)"
+    },
+    {
+      "cmd": "gedit archivo.txt",
+      "desc": "Editor gráfico (en sistemas con GUI)"
+    }
+  ],
+
+  "Búsqueda de Archivos y Contenido": [
+    {
+      "cmd": "find . -name \"*.txt\"",
+      "desc": "Buscar archivos por nombre en directorio actual"
+    },
+    {
+      "cmd": "find /home -name \"archivo*\"",
+      "desc": "Buscar en directorio específico"
+    },
+    {
+      "cmd": "find . -type f -name \"*.py\"",
+      "desc": "Buscar solo archivos (no directorios)"
+    },
+    {
+      "cmd": "find . -size +1M",
+      "desc": "Buscar archivos mayores a 1MB"
+    },
+    {
+      "cmd": "locate archivo.txt",
+      "desc": "Buscar archivo rápidamente (usa base de datos)"
+    },
+    {
+      "cmd": "sudo updatedb",
+      "desc": "Actualizar base de datos para locate"
+    },
+    {
+      "cmd": "grep \"texto\" archivo.txt",
+      "desc": "Buscar texto dentro de archivo"
+    },
+    {
+      "cmd": "grep -r \"texto\" directorio/",
+      "desc": "Buscar texto recursivamente en directorio"
+    },
+    {
+      "cmd": "grep -i \"texto\" archivo.txt",
+      "desc": "Búsqueda case-insensitive (ignorar mayúsculas)"
+    },
+    {
+      "cmd": "which comando",
+      "desc": "Mostrar ruta completa de un comando"
+    },
+    {
+      "cmd": "whereis comando",
+      "desc": "Mostrar ubicación de comando, source y manual"
+    }
+  ],
+
+  "Permisos y Propiedad": [
+    {
+      "cmd": "chmod +x script.sh",
+      "desc": "Hacer archivo ejecutable"
+    },
+    {
+      "cmd": "chmod 755 archivo",
+      "desc": "Establecer permisos específicos (rwxr-xr-x)"
+    },
+    {
+      "cmd": "chmod 644 archivo",
+      "desc": "Permisos estándar para archivos (rw-r--r--)"
+    },
+    {
+      "cmd": "chown usuario:grupo archivo",
+      "desc": "Cambiar dueño y grupo de archivo"
+    },
+    {
+      "cmd": "chown usuario archivo",
+      "desc": "Cambiar solo dueño del archivo"
+    },
+    {
+      "cmd": "chgrp grupo archivo",
+      "desc": "Cambiar solo grupo del archivo"
+    },
+    {
+      "cmd": "ls -l",
+      "desc": "Ver permisos de archivos (primera columna)"
+    },
+    {
+      "cmd": "umask",
+      "desc": "Mostrar máscara de permisos por defecto"
+    }
+  ],
+
+  "Procesos y Sistema": [
+    {
+      "cmd": "ps",
+      "desc": "Mostrar procesos del usuario actual"
+    },
+    {
+      "cmd": "ps aux",
+      "desc": "Mostrar todos los procesos del sistema"
+    },
+    {
+      "cmd": "top",
+      "desc": "Monitor interactivo de procesos (como Administrador de tareas)"
+    },
+    {
+      "cmd": "htop",
+      "desc": "Top mejorado con interfaz más amigable (instalar primero)"
+    },
+    {
+      "cmd": "kill 1234",
+      "desc": "Terminar proceso con PID específico"
+    },
+    {
+      "cmd": "kill -9 1234",
+      "desc": "Forzar terminación de proceso"
+    },
+    {
+      "cmd": "pkill nombre_proceso",
+      "desc": "Terminar proceso por nombre"
+    },
+    {
+      "cmd": "bg",
+      "desc": "Reanudar proceso en segundo plano"
+    },
+    {
+      "cmd": "fg",
+      "desc": "Traer proceso al primer plano"
+    },
+    {
+      "cmd": "jobs",
+      "desc": "Listar trabajos en segundo plano"
+    },
+    {
+      "cmd": "free -h",
+      "desc": "Mostrar memoria libre en formato legible"
+    },
+    {
+      "cmd": "df -h",
+      "desc": "Mostrar espacio en disco en formato legible"
+    },
+    {
+      "cmd": "du -sh directorio/",
+      "desc": "Mostrar tamaño de directorio"
+    },
+    {
+      "cmd": "uname -a",
+      "desc": "Mostrar información del sistema kernel"
+    },
+    {
+      "cmd": "uptime",
+      "desc": "Mostrar tiempo activo del sistema y carga"
+    }
+  ],
+
+  "Red y Conexiones": [
+    {
+      "cmd": "ping google.com",
+      "desc": "Probar conectividad a un servidor"
+    },
+    {
+      "cmd": "ifconfig",
+      "desc": "Mostrar configuración de red (obsoleto en algunas distros)"
+    },
+    {
+      "cmd": "ip a",
+      "desc": "Mostrar interfaces de red (comando moderno)"
+    },
+    {
+      "cmd": "ip addr show",
+      "desc": "Mostrar información detallada de interfaces"
+    },
+    {
+      "cmd": "netstat -tuln",
+      "desc": "Mostrar puertos abiertos y escuchando"
+    },
+    {
+      "cmd": "ss -tuln",
+      "desc": "Alternativa moderna a netstat"
+    },
+    {
+      "cmd": "curl https://ejemplo.com",
+      "desc": "Transferir datos desde/hacia servidor"
+    },
+    {
+      "cmd": "wget https://ejemplo.com/archivo",
+      "desc": "Descargar archivos desde internet"
+    },
+    {
+      "cmd": "ssh usuario@servidor",
+      "desc": "Conectar a servidor remoto via SSH"
+    },
+    {
+      "cmd": "scp archivo.txt usuario@servidor:/ruta/",
+      "desc": "Copiar archivos entre máquinas via SSH"
+    }
+  ],
+
+  "Compresión y Archivos": [
+    {
+      "cmd": "tar -czf archivo.tar.gz directorio/",
+      "desc": "Crear archivo comprimido tar.gz"
+    },
+    {
+      "cmd": "tar -xzf archivo.tar.gz",
+      "desc": "Extraer archivo tar.gz"
+    },
+    {
+      "cmd": "zip archivo.zip directorio/",
+      "desc": "Crear archivo zip"
+    },
+    {
+      "cmd": "unzip archivo.zip",
+      "desc": "Extraer archivo zip"
+    },
+    {
+      "cmd": "gzip archivo",
+      "desc": "Comprimir archivo (crea archivo.gz)"
+    },
+    {
+      "cmd": "gunzip archivo.gz",
+      "desc": "Descomprimir archivo .gz"
+    }
+  ],
+
+  "Usuarios y Grupos": [
+    {
+      "cmd": "whoami",
+      "desc": "Mostrar usuario actual"
+    },
+    {
+      "cmd": "id",
+      "desc": "Mostrar información de usuario y grupos"
+    },
+    {
+      "cmd": "who",
+      "desc": "Mostrar usuarios conectados"
+    },
+    {
+      "cmd": "w",
+      "desc": "Mostrar usuarios y lo que están haciendo"
+    },
+    {
+      "cmd": "last",
+      "desc": "Mostrar historial de logins"
+    },
+    {
+      "cmd": "sudo adduser nuevo_usuario",
+      "desc": "Crear nuevo usuario (requiere sudo)"
+    },
+    {
+      "cmd": "sudo deluser usuario",
+      "desc": "Eliminar usuario"
+    },
+    {
+      "cmd": "sudo usermod -aG grupo usuario",
+      "desc": "Añadir usuario a grupo"
+    },
+    {
+      "cmd": "groups usuario",
+      "desc": "Mostrar grupos a los que pertenece un usuario"
+    },
+    {
+      "cmd": "passwd",
+      "desc": "Cambiar contraseña del usuario actual"
+    },
+    {
+      "cmd": "sudo passwd usuario",
+      "desc": "Cambiar contraseña de otro usuario"
+    }
+  ],
+
+  "Package Management (Gestión de Paquetes)": [
+    {
+      "cmd": "sudo apt update",
+      "desc": "Actualizar lista de paquetes (Debian/Ubuntu)"
+    },
+    {
+      "cmd": "sudo apt upgrade",
+      "desc": "Actualizar paquetes instalados"
+    },
+    {
+      "cmd": "sudo apt install nombre_paquete",
+      "desc": "Instalar nuevo paquete"
+    },
+    {
+      "cmd": "sudo apt remove nombre_paquete",
+      "desc": "Desinstalar paquete"
+    },
+    {
+      "cmd": "sudo apt autoremove",
+      "desc": "Eliminar paquetes no necesarios"
+    },
+    {
+      "cmd": "sudo apt search \"texto\"",
+      "desc": "Buscar paquetes disponibles"
+    },
+    {
+      "cmd": "sudo dnf update",
+      "desc": "Actualizar sistema (Fedora/RHEL)"
+    },
+    {
+      "cmd": "sudo dnf install nombre_paquete",
+      "desc": "Instalar paquete (Fedora/RHEL)"
+    },
+    {
+      "cmd": "sudo pacman -Syu",
+      "desc": "Actualizar sistema (Arch Linux)"
+    },
+    {
+      "cmd": "sudo pacman -S nombre_paquete",
+      "desc": "Instalar paquete (Arch Linux)"
+    }
+  ],
+
+  "Información del Sistema": [
+    {
+      "cmd": "uname -a",
+      "desc": "Información del kernel y sistema"
+    },
+    {
+      "cmd": "lsb_release -a",
+      "desc": "Información de la distribución Linux"
+    },
+    {
+      "cmd": "cat /etc/os-release",
+      "desc": "Información del sistema operativo"
+    },
+    {
+      "cmd": "lscpu",
+      "desc": "Información de la CPU"
+    },
+    {
+      "cmd": "lsblk",
+      "desc": "Listar dispositivos de bloque (discos, particiones)"
+    },
+    {
+      "cmd": "lspci",
+      "desc": "Listar dispositivos PCI"
+    },
+    {
+      "cmd": "lsusb",
+      "desc": "Listar dispositivos USB"
+    },
+    {
+      "cmd": "dmidecode",
+      "desc": "Información detallada del hardware"
+    },
+    {
+      "cmd": "history",
+      "desc": "Mostrar historial de comandos"
+    },
+    {
+      "cmd": "date",
+      "desc": "Mostrar fecha y hora actual"
+    },
+    {
+      "cmd": "cal",
+      "desc": "Mostrar calendario del mes actual"
+    },
+    {
+      "cmd": "cal 2024",
+      "desc": "Mostrar calendario de año completo"
+    }
+  ],
+
+  "Trucos y Atajos Útiles": [
+    {
+      "cmd": "Ctrl + C",
+      "desc": "Cancelar comando actual"
+    },
+    {
+      "cmd": "Ctrl + Z",
+      "desc": "Pausar proceso (luego usar bg o fg)"
+    },
+    {
+      "cmd": "Ctrl + D",
+      "desc": "Cerrar sesión o terminal"
+    },
+    {
+      "cmd": "Ctrl + L",
+      "desc": "Limpiar pantalla (como clear)"
+    },
+    {
+      "cmd": "Ctrl + R",
+      "desc": "Buscar en historial de comandos"
+    },
+    {
+      "cmd": "Ctrl + A",
+      "desc": "Ir al inicio de la línea"
+    },
+    {
+      "cmd": "Ctrl + E",
+      "desc": "Ir al final de la línea"
+    },
+    {
+      "cmd": "Ctrl + U",
+      "desc": "Borrar desde cursor hasta inicio de línea"
+    },
+    {
+      "cmd": "Ctrl + K",
+      "desc": "Borrar desde cursor hasta final de línea"
+    },
+    {
+      "cmd": "!!",
+      "desc": "Repetir último comando"
+    },
+    {
+      "cmd": "!comando",
+      "desc": "Ejecutar último comando que empiece con 'comando'"
+    },
+    {
+      "cmd": "comando --help",
+      "desc": "Mostrar ayuda de cualquier comando"
+    },
+    {
+      "cmd": "man comando",
+      "desc": "Mostrar manual completo del comando"
+    },
+    {
+      "cmd": "whatis comando",
+      "desc": "Breve descripción de qué hace un comando"
+    },
+    {
+      "cmd": "alias",
+      "desc": "Listar todos los alias definidos"
+    },
+    {
+      "cmd": "echo $PATH",
+      "desc": "Mostrar rutas donde se buscan los comandos"
+    }
+  ],
+
+  "Seguridad Básica": [
+    {
+      "cmd": "sudo comando",
+      "desc": "Ejecutar comando como superusuario"
+    },
+    {
+      "cmd": "su -",
+      "desc": "Cambiar a usuario root"
+    },
+    {
+      "cmd": "exit",
+      "desc": "Salir de sesión actual o terminal"
+    },
+    {
+      "cmd": "chmod 700 archivo_confidencial",
+      "desc": "Hacer archivo solo accesible por dueño"
+    },
+    {
+      "cmd": "ssh-keygen",
+      "desc": "Generar par de claves SSH"
+    },
+    {
+      "cmd": "sudo iptables -L",
+      "desc": "Listar reglas de firewall"
+    },
+    {
+      "cmd": "sudo ufw status",
+      "desc": "Ver estado de firewall simple (UFW)"
+    }
+  ],
+
+  "Misceláneos Útiles": [
+    {
+      "cmd": "watch -n 1 comando",
+      "desc": "Ejecutar comando cada segundo mostrando salida"
+    },
+    {
+      "cmd": "time comando",
+      "desc": "Medir tiempo de ejecución de comando"
+    },
+    {
+      "cmd": "sleep 5",
+      "desc": "Pausar por 5 segundos"
+    },
+    {
+      "cmd": "seq 1 10",
+      "desc": "Generar secuencia de números del 1 al 10"
+    },
+    {
+      "cmd": "yes",
+      "desc": "Generar flujo infinito de 'y' (útil para scripts)"
+    },
+    {
+      "cmd": "bc",
+      "desc": "Calculadora de línea de comandos"
+    },
+    {
+      "cmd": "factor 42",
+      "desc": "Mostrar factores primos de un número"
+    },
+    {
+      "cmd": "base64 archivo",
+      "desc": "Codificar/decodificar base64"
+    },
+    {
+      "cmd": "md5sum archivo",
+      "desc": "Calcular checksum MD5 de archivo"
+    },
+    {
+      "cmd": "sha256sum archivo",
+      "desc": "Calcular checksum SHA256 de archivo"
+    }
+  ]
+}
